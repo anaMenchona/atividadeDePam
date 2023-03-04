@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        width: 100vw;
+        height: 100vh;
+
+        text-align: center;
+
+        background-color: rgb(171, 109, 229);
+      }
+      .main{
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 1rem;
+      }
+      input{
+        width: 15rem;
+      }
+      button{
+        width: 15rem;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div class="main">
+        <input type="number" placeholder="digite o salário:" id="salario">
+        <button onclick="salario()">Enviar</button>
+        <span id="texto"></span>
+        <a href="sair.html">sair</a>
+    </div>
+    <script>
+      function salario(){
+        var salario = document.getElementById('salario').value;
+        var salAumento = salario;
+        var texto = document.getElementById('texto');
+
+          if(salario <= 500){
+          salAumento = salario*1.10;
+          texto.innerHTML = ('O salário com aumento fica: ' + salAumento);
+          } else{
+            salAumento = salario*1.08;
+            texto.innerHTML = ('O salário com aumento fica: ' + salAumento);
+          } 
+      }
+    </script>
+  </body>
+</html>

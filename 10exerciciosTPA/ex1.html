@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        width: 100vw;
+        height: 100vh;
+
+        text-align: center;
+        
+
+        background-color: rgb(171, 109, 229);
+      }
+      .main{
+        padding: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <span id="recebeTexto"></span>
+    </div>
+    <script>
+      window.onload = event =>{
+        for(var x = 0; x<101; x++){
+          if(x%2 == 0){
+            document.getElementById('recebeTexto').innerHTML += x + ' - ';
+          }
+        }
+      } 
+    </script>
+  </body>
+</html>

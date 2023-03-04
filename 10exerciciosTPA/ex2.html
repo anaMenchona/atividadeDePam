@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio 2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        width: 100vw;
+        height: 100vh;
+
+        text-align: center;
+
+        background-color: rgb(171, 109, 229);
+      }
+      .main{
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 1rem;
+      }
+      input{
+        width: 15rem;
+      }
+      button{
+        width: 15rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <input type="text" placeholder="digite um número:" id="fatorial">
+        <button onclick="fatorial()">Enviar</button>
+        <span id="texto"></span>
+    </div>
+    <script>
+      function fatorial(){
+        var fatorial = document.getElementById('fatorial').value;
+        var texto = document.getElementById('texto');
+        var pote = fatorial
+
+        for (let x = 1; x < fatorial; x++) {
+          pote *= x;
+        }
+        texto.innerHTML = 'O fatorial é: '+ pote;
+
+      }
+    </script>
+  </body>
+</html>
