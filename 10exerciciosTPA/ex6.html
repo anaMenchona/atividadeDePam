@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
-    <title>Exercicio 4</title>
+    <title>Exercicio 6</title>
     <style>
       * {
         margin: 0;
@@ -34,19 +34,22 @@
   </head>
   <body id="body">
     <div class="main">
-        <input type="number" placeholder="digite um número:" id="numero1">
-        <input type="number" placeholder="digite outro número" id="numero2">
-        <button onclick="mostrarNumeros()">Enviar</button>
+        <input type="number" placeholder="digite o salário:" id="salario">
+        <button onclick="salario()">Enviar</button>
         <span id="texto"></span>
         <a href="sair.html">sair</a>
     </div>
     <script>
-      function mostrarNumeros(){
-        var A = document.getElementById('numero1').value;
-        var C = document.getElementById('numero2').value;
+      function salario(){
+        var salario = document.getElementById('salario').value;
         var texto = document.getElementById('texto');
 
-        texto.innerHTML = ('Os números digitados foram: ' + A + ', ' + C);
+          if(salario <= 500){
+            salario = salario*1.1
+            texto.innerHTML = ('O salário com aumento fica: ' + salario);
+          } else{
+            texto.innerHTML = ('O salário não tem aumento');
+          } 
       }
     </script>
   </body>

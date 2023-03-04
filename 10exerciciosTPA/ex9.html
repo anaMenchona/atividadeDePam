@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
-    <title>Exercicio 4</title>
+    <title>Exercicio 8</title>
     <style>
       * {
         margin: 0;
@@ -34,19 +34,21 @@
   </head>
   <body id="body">
     <div class="main">
-        <input type="number" placeholder="digite um número:" id="numero1">
-        <input type="number" placeholder="digite outro número" id="numero2">
-        <button onclick="mostrarNumeros()">Enviar</button>
-        <span id="texto"></span>
+      <label for="sexo">Digite o sexo nesse formato: F ou M</label>
+      <input type="text" id="sexo">
+      <button onclick="sexo()">Enviar</button>
+      <span id="textoSexo"></span>
         <a href="sair.html">sair</a>
     </div>
     <script>
-      function mostrarNumeros(){
-        var A = document.getElementById('numero1').value;
-        var C = document.getElementById('numero2').value;
-        var texto = document.getElementById('texto');
+      function sexo(){
+        var sexo = document.getElementById('sexo').value;
 
-        texto.innerHTML = ('Os números digitados foram: ' + A + ', ' + C);
+        if(sexo == 'M' | sexo == 'F'){
+          document.getElementById('textoSexo').innerHTML = 'Sexo é válido';
+        } else{
+          document.getElementById('textoSexo').innerHTML = 'Sexo é inválido';
+        }
       }
     </script>
   </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
-    <title>Exercicio 4</title>
+    <title>Exercicio 7</title>
     <style>
       * {
         margin: 0;
@@ -34,19 +34,21 @@
   </head>
   <body id="body">
     <div class="main">
-        <input type="number" placeholder="digite um número:" id="numero1">
-        <input type="number" placeholder="digite outro número" id="numero2">
-        <button onclick="mostrarNumeros()">Enviar</button>
+        <input type="number" placeholder="digite o número:" id="numero">
+        <button onclick="numero()">Enviar</button>
         <span id="texto"></span>
         <a href="sair.html">sair</a>
     </div>
     <script>
-      function mostrarNumeros(){
-        var A = document.getElementById('numero1').value;
-        var C = document.getElementById('numero2').value;
+      function numero(){
+        var numero = document.getElementById('numero').value;
         var texto = document.getElementById('texto');
 
-        texto.innerHTML = ('Os números digitados foram: ' + A + ', ' + C);
+          if(numero%5 == 0){
+            texto.innerHTML = ('Este número é divisível por 5');
+          } else{
+            texto.innerHTML = ('Este número não é divisível por 5');
+          } 
       }
     </script>
   </body>

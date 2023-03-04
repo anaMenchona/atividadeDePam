@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio 8</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        width: 100vw;
+        height: 100vh;
+
+        text-align: center;
+
+        background-color: rgb(171, 109, 229);
+      }
+      .main{
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 1rem;
+      }
+      input{
+        width: 15rem;
+      }
+      button{
+        width: 15rem;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div class="main">
+        <input type="number" placeholder="digite um número:" id="numero1">
+        <input type="number" placeholder="digite outro número:" id="numero2">
+        <input type="number" placeholder="digite outro número:" id="numero3">
+        <input type="number" placeholder="digite outro número:" id="numero4">
+        <input type="number" placeholder="digite outro número:" id="numero5">
+        <button onclick="numero()">Enviar</button>
+        <span id="texto"></span>
+        <span id="texto2"></span>
+        <a href="sair.html">sair</a>
+    </div>
+    <script>
+      function numero(){
+        var numero1 = document.getElementById('numero1').value;
+        var numero2 = document.getElementById('numero2').value;
+        var numero3 = document.getElementById('numero3').value;
+        var numero4 = document.getElementById('numero4').value;
+        var numero5 = document.getElementById('numero5').value;
+        var texto = document.getElementById('texto');
+        var texto2 = document.getElementById('texto2');
+
+        texto.innerHTML = 'Os números ao quadrado são: ' + (numero1*numero1) + ', ' + (numero2*numero2) + ', ' + (numero3*numero3) + ', ' + (numero4*numero4) + ', ' + (numero5*numero5);
+        soma = (numero1*numero1) + (numero2*numero2) + (numero3*numero3) + (numero4*numero4) + (numero5*numero5);
+        texto2.innerHTML = 'A soma dos quadrados desses números é de: ' + soma;
+      }
+    </script>
+  </body>
+</html>
